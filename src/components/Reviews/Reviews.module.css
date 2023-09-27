@@ -1,0 +1,43 @@
+.Review{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 48px;
+    padding: 0 0 48px;
+}
+
+@media screen and (min-width: 744px) {
+    .Review{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Review{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 48px;
+    }
+}
+
+.Card{
+    text-align: center;
+    color: rgba(0,0,0,.3);
+
+}
+
+.Rating{
+    margin-bottom: 10px;
+}
+
+.Text{
+    line-height: 1.8;
+}
+
+.Title{
+    margin-top: 0;
+    padding-top: 48px;
+    text-align: center;
+}

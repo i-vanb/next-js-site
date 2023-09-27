@@ -1,0 +1,129 @@
+.wrapper{
+    position: fixed;
+    bottom: 30px;
+    right: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    translate: 50% 0;
+}
+.hand{
+    background: url("/svg/one-finger.svg") no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    animation: SlideLeftAnimation 3s ease infinite;
+}
+.line{
+    width: 0;
+    height: 0;
+    border-radius: 7px;
+    background: #fafafa;
+    position: absolute;
+    top: 11px;
+    right: 38px;
+    animation: SlideLeftDotAnimation 3s ease infinite;
+}
+
+
+.arrow{
+    opacity: 0;
+    width: 100%;
+    height: 1.5rem;
+    background: url("/svg/chevron-down.svg") no-repeat center center;
+    /*background-size: 1.5rem;*/
+    background-size: contain;
+    animation: ScrollDownAnimation 3s ease infinite;
+    position: absolute;
+}
+
+.title{
+    color: #fafafa;
+    text-align: center;
+    animation: scrollDownTitile 1s linear infinite;
+}
+
+@keyframes SlideLeftAnimation {
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(25deg);
+    }
+    50%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes SlideLeftDotAnimation {
+    0%{
+        transform: translateX(0);
+        width: 0;
+        height: 0;
+    }
+    23%{
+        width: 0;
+        height: 0;
+    }
+    25%{
+        width: 14px;
+        height: 14px;
+        /*transform: translateX(0);*/
+    }
+    50%{
+        width: 38px;
+        height: 14px;
+        opacity: 1;
+        transform: translateX(0);
+        /*transform: translateX(-20px);*/
+    }
+    100%{
+        opacity: 0;
+        width: 0;
+        height: 14px;
+        transform: translateX(-24px);
+    }
+}
+
+
+
+@keyframes ScrollDownAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+        background-size: 1rem;
+    }
+    10%{
+        background-size: 2rem;
+    }
+    30% {
+        transform: translateY(20px);
+        opacity: 1;
+        background-size: 2rem;
+    }
+    60%{
+        transform: translateY(30px);
+        opacity: 1;
+        background-size: 2rem;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+        background-size: 1rem;
+    }
+}
+
+@keyframes scrollDownTitile {
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}

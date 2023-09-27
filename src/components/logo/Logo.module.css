@@ -1,0 +1,27 @@
+.Logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.Label{
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.Link{
+    text-decoration: none;
+    color: initial;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+    .Label{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Label{
+        font-size: 1rem;
+    }
+}

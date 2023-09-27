@@ -1,0 +1,25 @@
+.wrapper{
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #F1641E;
+    display: inline-block;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    font-size: 18px;
+}
+
+.link:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    color: #f3efef;
+}
+
+@media screen and (max-width: 768px){
+    .link{
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}

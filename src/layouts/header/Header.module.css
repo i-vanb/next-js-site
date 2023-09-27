@@ -1,0 +1,28 @@
+.Header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    transition: background-color .3s ease-in-out;
+}
+
+.sticky{
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+@media (min-width: 768px){
+    .Header{
+        height: 100px;
+    }
+}
+
+.Wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}

@@ -1,0 +1,30 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-bottom: 24px;
+}
+
+.slider{
+    flex: 1;
+    overflow: hidden;
+}
+.info{
+    flex: 1;
+}
+.name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 12px;
+}
+
+@media (min-width: 920px){
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 24px;
+    }
+}

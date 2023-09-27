@@ -1,0 +1,10 @@
+.defaultImage{
+    text-align: center;
+}
+.defaultImage img{
+    width: 60px;
+    min-height: 300px;
+    object-fit: contain;
+    object-position: center;
+    transition: scale .5s ease;
+}

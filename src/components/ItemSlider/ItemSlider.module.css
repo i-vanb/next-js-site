@@ -1,0 +1,133 @@
+.wrapper{
+    position: relative;
+    margin-bottom: 24px;
+}
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /*box-shadow: 0 0 10px rgba(0,0,0,.3);*/
+    /*background-color: #fff;*/
+    transform: translateY(-100%);
+}
+.arrow.left{
+    left: 10px;
+}
+.arrow.right{
+    right: 10px;
+}
+.arrow svg{
+    width: 100%;
+    height: 100%;
+    fill: #706d63
+}
+.arrow:hover svg{
+    fill: #ffbc4b;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+}
+.images::-webkit-scrollbar { /* WebKit */
+    display: none;
+}
+.thumbnails{
+    display: flex;
+    flex-direction: row;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+}
+.thumbnails::-webkit-scrollbar { /* WebKit */
+    display: none;
+}
+.image{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.image>div{
+    text-align: center;
+}
+.thumbnail{
+    /*height: 75px;*/
+    /*width: 60px;*/
+    /*min-width: 60px;*/
+    /*background-color: #ffbc4b;*/
+    scroll-snap-align: start;
+    opacity: .5;
+    cursor: pointer;
+}
+.thumbnail.active{
+    opacity: 1;
+}
+
+
+.dots{
+    margin: 12px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    /*position: absolute;*/
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    /*background-color: #ffbc4b;*/
+}
+
+.dot.active{
+    background-color: #ffbc4b;
+}
+
+@media  screen and (min-width: 744px) {
+    .image{
+        height: 600px;
+    }
+    .thumbnail{
+        height: 120px;
+        width: 75px;
+        min-width: 75px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .image{
+        padding: 0;
+    }
+    .arrow{
+        display: none;
+    }
+    .thumbnails{
+        display: none;
+    }
+}
